@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departemen Fisika UNHAS</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(to bottom right, #e9f8f9 10%, #d6f0ef 70%, #fcf9ff 100%);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background: #016f40;
+            color: white;
+            padding: 24px 36px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .logo {
+            width: 70px;
+            margin-right: 20px;
+        }
+        .title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        main {
+            max-width: 900px;
+            background: white;
+            margin: 30px auto;
+            padding: 24px 28px 36px 28px;
+            border-radius: 16px;
+            box-shadow: 0 2px 14px rgba(1,111,64,0.15), 0 1px 0 rgba(0,0,0,0.06);
+        }
+        h2 {
+            margin-top: 32px;
+            color: #016f40;
+            border-bottom: 2px solid #d6f0ef;
+            padding-bottom: 8px;
+        }
+        .peminatan {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        .card {
+            background: #d6f0ef;
+            border-radius: 12px;
+            padding: 18px 18px 12px 18px;
+            box-shadow: 0 2px 8px rgba(1,111,64,0.09);
+            flex: 1 1 220px;
+            min-width: 220px;
+            max-width: 350px;
+        }
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #118257;
+        }
+        button.labOptikBtn {
+            background: #016f40;
+            color: white;
+            border: none;
+            padding: 11px 22px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 7px rgba(1,111,64,0.13);
+            margin-top: 14px;
+        }
+        button.labOptikBtn:hover {
+            background: #118257;
+        }
+        .optik-database {
+            display: none;
+            margin-top: 28px;
+            animation: fadeIn 0.7s;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to   {opacity: 1;}
+        }
+        .db-section {
+            margin-bottom: 24px;
+        }
+        .db-section h4 {
+            color: #01724b;
+            margin-bottom: 6px;
+        }
+        ul {
+            margin-top: 0;
+            margin-bottom: 8px;
+            padding-left: 22px;
+        }
+        @media (max-width:600px) {
+            header {flex-direction: column; text-align: center;}
+            main {padding: 12px;}
+            .card {min-width: unset;}
+            .peminatan {flex-direction: column;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/id/6/67/Logo_Unhas.png" alt="Logo UNHAS" class="logo">
+        <div class="title">Universitas Hasanuddin<br>Departemen Fisika</div>
+    </header>
+    <main>
+        <h2>Tentang Departemen Fisika</h2>
+        <p>
+            Departemen Fisika Universitas Hasanuddin (UNHAS) memiliki 4 peminatan untuk menyiapkan lulusan yang unggul di berbagai bidang ilmu fisika. Berikut penjelasan setiap peminatannya:
+        </p>
+        <div class="peminatan">
+            <div class="card">
+                <h3>Optik dan Spektroskopi</h3>
+                <p>
+                    Fokus pada studi interaksi cahaya dengan materi, teknik-teknik analisis optik, instrumentasi modern, serta aplikasi optik dalam kedokteran, industri, dan lingkungan. Mahasiswa belajar banyak eksperimen laboratorium, pemrosesan citra, serta spektroskopi molekuler dan atom.
+                </p>
+                <button class="labOptikBtn" onclick="showOptikDB()">Lab Optik: Database &rarr;</button>
+            </div>
+            <div class="card">
+                <h3>Elektronika dan Instrumentasi (Elins)</h3>
+                <p>
+                    Mempelajari penerapan elektronika, sensor, aktuator, pemrograman mikrokontroler, dan pengembangan sistem instrumentasi untuk riset dan industri. Peminatan ini juga membahas sistem kendali, robotika, serta mengintegrasikan perangkat keras dan perangkat lunak.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Material</h3>
+                <p>
+                    Mendalami sifat fisik dan kimia material, seperti semikonduktor, logam, keramik, dan biomaterial. Mahasiswa akan memahami karakterisasi, sintesis, rekayasa material baru, serta aplikasi di bidang teknologi, industri, dan kesehatan.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Teori</h3>
+                <p>
+                    Menitikberatkan pada pemodelan matematis, simulasi, dan teori fisika dasar dan terapan. Mahasiswa mengembangkan kemampuan analisis, perhitungan, dan penerapan teori fisika pada permasalahan riil seperti fisika kuantum, termodinamika, dan fisika komputasi.
+                </p>
+            </div>
+        </div>
+
+        <div id="optikDB" class="optik-database">
+            <div class="db-section">
+                <h4>Database Mahasiswa Laboratorium Optik dan Spektroskopi</h4>
+                <ul>
+                    <li>Moh. Aryansyah Rizqullah Daenunu_H021231062</li>
+                    <li>Algiza Idam_H021231028</li>
+                    <li>Aqasya Claudia Zahnita_H021231068</li>
+                    <li>Armitha Anas_H021231060</li>
+                    <li>Dea Aulia Masiku_H021231002</li>
+                    <li>Eka Adelia Putri Sariman_H021231065</li>
+                    <li>Fajriana Aris_H021231014</li>
+                    <li>Icha Nurandini_H021231021</li>
+                    <li>Ilma Fadhilah_H021231064</li>
+                    <li>Kasyfil Aziz_H021231058</li>
+                    <li>Nur Fadiyah_H021231011</li>
+                    <li>Nurfaika_H021231048</li>
+                    <li>Nurul Iftitah Y.G_H021231056</li>
+                    <li>Serli_H021231032</li>
+                    <li>St. Rahmayanti_H021231044</li>
+                    <li>Suci Rahmayada_H021231059</li>
+                    <li>Tasyha Sri Desiana_H021231049</li>
+                </ul>
+            </div>
+            <div class="db-section">
+                <h4>Database Dosen Laboratorium Optik dan Spektroskopi</h4>
+                <ul>
+                    <li>Arfinna S.Si., M.Si., F.Med.</li>
+                    <li>Ajeng Anggreny Ibrahim S.Pd., M.Si.</li>
+                    <li>Bannu S.Si, M.Si.</li>
+                    <li>Prof. Dr. Syamsir D., D., MS.</li>
+                    <li>Dr. Sri Dewi Astuty, S.Si., M.Si.</li>
+                    <li>Ayu Hardianti Pratiwi, S.Pd., M.Si.</li>
+                </ul>
+            </div>
+            <div class="db-section">
+                <h4>Database Penelitian Sebelumnya</h4>
+                <ul>
+                    <li>Analisis Nilai Low Contrast Dan Noise Ratio Citra Pasien Plak Koroner Menggunakan Indoqct</li>
+                    <li>Evaluasi Parameter Indoqct Menggunakan Citra Pasien Plak Koroner</li>
+                    <li>Analisis Penggunaan Multi Leaf Collimator (MLC) Terhadap Distribusi Dosis Oar (Organ At Risk) Dengan Teknik IMRT (Intensity Modulated Radiation Theraphy) Pada Kasus Nasofaring</li>
+                    <li>Analysis Of Entrance Skin Dose (ESD) Values And Scatter Doses In The Thyroid Area And Gonad Area With Variations In Field Of View (FOV) Values And Phantom Thickness Using C-Arm And Fluoroskopy</li>
+                    <li>The Effect Of Contrast Media On HU, CTDI And DLP Values In CT Scan Examination To Determine Typical Dose Of Values</li>
+                </ul>
+            </div>
+            <button class="labOptikBtn" style="background:#f44336;margin-left:8px;" onclick="hideOptikDB()">Tutup &times;</button>
+        </div>
+    </main>
+    <script>
+        function showOptikDB() {
+            document.getElementById('optikDB').style.display = 'block';
+            window.scrollTo({top: document.getElementById('optikDB').offsetTop - 70, behavior: 'smooth'});
+        }
+        function hideOptikDB() {
+            document.getElementById('optikDB').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
